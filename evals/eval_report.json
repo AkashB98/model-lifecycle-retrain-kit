@@ -1,0 +1,47 @@
+{
+  "kit": "model-lifecycle-retrain-kit",
+  "passed": 8,
+  "results": [
+    {
+      "detail": "auc=0.783209 brier=0.135441",
+      "name": "G1 champion AUC on period-1 holdout pinned",
+      "passed": true
+    },
+    {
+      "detail": "psi=1.11443",
+      "name": "G2 drift PSI on utilization fires (PSI > 0.25)",
+      "passed": true
+    },
+    {
+      "detail": "drop=0.058204",
+      "name": "G3 period-2 AUC drop fires (drop > 0.03)",
+      "passed": true
+    },
+    {
+      "detail": "challenger_auc=0.786853",
+      "name": "G4 challenger promoted in drift scenario (wins by >= 0.01, Brier not worse)",
+      "passed": true
+    },
+    {
+      "detail": "control_psi=0.044039",
+      "name": "G5 control: no trigger, no retrain (PSI pinned)",
+      "passed": true
+    },
+    {
+      "detail": "margin and brier rejections both pinned",
+      "name": "G6 gate rejects challenger failing margin / failing Brier",
+      "passed": true
+    },
+    {
+      "detail": "hand_auc=0.75 psi_hand=0.274653",
+      "name": "G7 AUC/PSI match hand-computed examples + brute force",
+      "passed": true
+    },
+    {
+      "detail": "codes=(1, 0, 2)",
+      "name": "G8 CLI check exit codes 1/0/2 + lifecycle determinism",
+      "passed": true
+    }
+  ],
+  "total": 8
+}
